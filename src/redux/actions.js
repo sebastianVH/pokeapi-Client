@@ -1,14 +1,12 @@
 import axios from "axios";
 import { SET_POKEMONS,GET_TYPES,ORDER_BY_NAME,ORDER_BY_ATTACK, FILTER_BY_TYPE,FILTER_BY_ORIGIN,ADD_POKEMON } from "./actionsTypes";
 
-const URL_POKEMON = "http://localhost:3001/pokemons"
-const URL_TYPES = "http://localhost:3001/types"
 
 
 export const setPokemons = () => {
     return async (dispatch) => {
         try {
-            const {data} = await axios(`${URL_POKEMON}`)
+            const {data} = await axios(`/pokemons`)
             return dispatch({
                 type: SET_POKEMONS,
                 payload: data
@@ -22,7 +20,7 @@ export const setPokemons = () => {
 export const getTypes = () => {
     return async (dispatch) =>{
         try {
-            const {data} = await axios(URL_TYPES)
+            const {data} = await axios('/types')
             return dispatch({
                 type: GET_TYPES,
                 payload: data
@@ -71,7 +69,7 @@ export const filterByOrigin = (order) => {
 export const createPokemon = (formData) =>{
     return async (dispatch) => {
         try {
-            const {data} = await axios.post(`${URL_POKEMON}`, formData)
+            const {data} = await axios.post('/', formData)
             return dispatch({
                 type: ADD_POKEMON,
                 payload: data

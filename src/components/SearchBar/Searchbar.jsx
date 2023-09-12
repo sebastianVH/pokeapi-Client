@@ -27,7 +27,7 @@ export default function SearchBar() {
    const search = async () =>{
       if (errors) return setErrorAlert({message: "Please, check the errors."})
       try {
-         const {data} = await axios(`http://localhost:3001/pokemons?name=${name}`)
+         const {data} = await axios(`/pokemons?name=${name}`)
          navigate(`/detail/${data.id}`)
       } catch (error) {
          setErrorAlert({title:"", message: error.response.data.error})

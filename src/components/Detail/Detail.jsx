@@ -5,7 +5,6 @@ import styles from './Detail.module.css'
 import unknown from "../../assets/img/unknown.png"
 import Alert from "../Alert/Alert"
 
-
 export default function Detail(){
 
     const {id} = useParams()
@@ -13,7 +12,7 @@ export default function Detail(){
     const [errorAlert, setErrorAlert] = useState(false)
 
     useEffect(()=>{
-        id && axios(`http://localhost:3001/pokemons/${id}`)
+        id && axios(`/pokemons/${id}`)
         .then(({data}) => {
             return setDetail(data); 
         }).catch(error =>
