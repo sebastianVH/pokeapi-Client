@@ -1,0 +1,111 @@
+.container{
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.inputContainer{
+  display: flex;
+}
+.search{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 8px 5px;
+    border-radius: 25px 25px 25px 25px;
+    height: 34px;
+}
+
+.btnAgregar{
+    height: 30px;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    translate: -32px 2px;
+}
+
+.btnAgregar:hover{
+  /*animacion shake*/
+}
+
+.search:focus{
+    animation: resplandor 2s  infinite;
+}
+
+
+@keyframes resplandor {
+    0% {
+      box-shadow: 0 0 30px #ffee55;
+    }
+    50% {
+      box-shadow: 0 0 10px #ffee33;
+    }
+    75% {
+      box-shadow: 0 0 10px #ffee11;
+    }
+    100% {
+      box-shadow: 0 0 30px #ffff00;
+    }
+  }
+
+  .label{
+    color: white;
+  }
+
+  .containerField{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title{
+    font-family: 'pokeFont';
+    margin: 0 auto;
+    -webkit-text-stroke: 0.5px rgb(2, 2, 171);
+    -webkit-text-fill-color: rgb(250, 242, 0);
+  }
+
+  .pikachu{
+    width: 75px;
+  }
+
+  .pokeball{
+    height: 30px;
+  }
+
+  .titleBar{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    align-content: center;
+  }
+
+  .buttonForm{
+    background-image: url(../../assets/img/banner-pikachu.png);
+    background-size: cover;
+    background-position-y: 30%;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    width: 20vw;
+    height: fit-content;
+    font-size: x-large;
+    text-align: center;
+    padding: 10px;
+  }
+
+.tagCapture{
+  color: aliceblue;
+  margin: 0px;
+}
+
+.errorText{
+  color: red;
+  font-size: small;
+  margin: 0 auto;
+}

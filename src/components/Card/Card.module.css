@@ -1,0 +1,62 @@
+.cardContainer{
+    font-size: 20px;
+    border: 2px solid rgb(129, 129, 129);
+    border-radius: 15px;
+    /* background: linear-gradient(90deg, #c800ff, #ffffff, #001eff); */
+    background-color: rgba(0, 0, 0, 0.849);
+    background-size: 200% 200%;
+    height: 300px;
+    width: 280px;
+    box-shadow: 4px 4px 23px -1px rgba(255,255,255,0.61);
+    -webkit-box-shadow: 4px 4px 23px -1px rgba(255,255,255,0.61);
+    -moz-box-shadow: 4px 4px 23px -1px rgba(255,255,255,0.61);
+}
+
+.cardContainer:hover{
+    cursor: pointer;
+    background-color: rgba(134, 134, 134, 0.603);
+}
+
+.textDetail, .textTypes{
+    /* animation: resplandor 4s ease-in-out infinite; */
+    color: white;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0px;
+    display: block;
+    text-transform: capitalize;
+}
+
+.textDetail{
+    font-family: 'pokeFont';
+}
+
+.textTypes {
+font-family: 'fontGameBoy';
+font-size: smaller;
+margin-bottom: 10px;
+}
+
+.imgPokemon{
+    height: 160px;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    margin-bottom: 5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.typesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.detailIcon {
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    height: 30px;
+}
+
