@@ -69,7 +69,7 @@ export const filterByOrigin = (order) => {
 export const createPokemon = (formData) =>{
     return async (dispatch) => {
         try {
-            const {data} = await axios.post('/', formData)
+            const {data} = await axios.post('/pokemons', formData)
             return dispatch({
                 type: ADD_POKEMON,
                 payload: data
