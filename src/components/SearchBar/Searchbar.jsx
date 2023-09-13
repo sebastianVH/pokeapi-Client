@@ -26,6 +26,7 @@ export default function SearchBar() {
 
    const search = async () =>{
       if (errors) return setErrorAlert({message: "Please, check the errors."})
+      if(name === "") return setErrorAlert({message: "Please, enter a name"})
       try {
          const {data} = await axios(`/pokemons?name=${name}`)
          navigate(`/detail/${data.id}`)
