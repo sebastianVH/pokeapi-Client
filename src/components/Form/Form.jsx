@@ -22,6 +22,7 @@ export default function Form(){
         speed:"",
         height:"",
         weight:"",
+        author:"",
         types:[]
     })
 
@@ -157,6 +158,10 @@ export default function Form(){
                                         return <option key={type.id} value={type.name}> {type.name} </option>
                                         })} 
                                 </select>
+                                <label className={styles.inputLabel} htmlFor="weight">Author</label>
+                                <input type="number" name="author" className={errors.author ? styles.error :styles.success} value={pokemondata.author} onChange={handleChange} />
+                                <span className={styles.errorText}>{errors.author}</span>
+                            
                             </div>
                         </div>
                         <div className={styles.row}>
