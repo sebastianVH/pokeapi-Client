@@ -123,16 +123,19 @@ export default function Form(){
                             <div className={styles.formElements}>
                                 <label className={styles.inputLabel} htmlFor="speed">Speed</label>
                                 <input type="number" name="speed" className={styles.success} value={pokemondata.speed} onChange={handleChange} />
+                                <span className={styles.errorText}>{errors.speed}</span>
                             </div>
                         </div>
                         <div className={styles.row}>
                             <div className={styles.formElements}>
                                 <label className={styles.inputLabel} htmlFor="height">Height</label>
                                 <input type="number" name="height" className={styles.success} value={pokemondata.height} onChange={handleChange} />
+                                <span className={styles.errorText}>{errors.height}</span>
                             </div>
                             <div className={styles.formElements}>
                                 <label className={styles.inputLabel} htmlFor="weight">Weight</label>
                                 <input type="number" name="weight" className={styles.success} value={pokemondata.weight} onChange={handleChange} />
+                                <span className={styles.errorText}>{errors.weight}</span>
                             </div>
                         </div>
                         <div className={styles.row}>
