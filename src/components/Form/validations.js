@@ -8,15 +8,15 @@ const alternateIntegerRegex = /^(100|[1-9]?\d)$/; // Esta expresión valida núm
 export function Validations(data){
     const errors = {}
 
-    if(data.name && !regexCharacters.test(data.name)) errors.name = "Only alphabetic with length between 3 and 15";
-    if(data.image && !urlRegex.test(data.image)) errors.image = "Image must be a URL";
-    if(data.hp && !integerRegex.test(data.hp))errors.hp = 'Integer number between 1 and 100';
-    if(data.attack  && !integerRegex.test(data.attack))errors.attack = 'Integer number between 1 and 100';
-    if(data.defense && !integerRegex.test(data.defense))errors.defense = 'Integer number between 1 and 100';
-    if(data.speed && !alternateIntegerRegex.test(data.speed)) errors.speed = 'Integer number between 0 and 100'
-    if(data.height && !alternateIntegerRegex.test(data.height)) errors.height = 'Integer number between 0 and 100'
-    if(data.weight && !alternateIntegerRegex.test(data.weight)) errors.weight = 'Integer number between 0 and 100'
-    if(data.types && (data.types.length < 1)) errors.types = 'Select at least 1 type'
+    if(!regexCharacters.test(data.name)) errors.name = "Only alphabetic with length between 3 and 15";
+    if(!urlRegex.test(data.image)) errors.image = "Image must be a URL";
+    if(!integerRegex.test(data.hp))errors.hp = 'Integer number between 1 and 100';
+    if(!integerRegex.test(data.attack))errors.attack = 'Integer number between 1 and 100';
+    if(!integerRegex.test(data.defense))errors.defense = 'Integer number between 1 and 100';
+    if(!alternateIntegerRegex.test(data.speed)) errors.speed = 'Integer number between 0 and 100'
+    if(!alternateIntegerRegex.test(data.height)) errors.height = 'Integer number between 0 and 100'
+    if(!alternateIntegerRegex.test(data.weight)) errors.weight = 'Integer number between 0 and 100'
+    if(data.types.length < 1) errors.types = 'Select at least 1 type'
 
     return errors;
 }
