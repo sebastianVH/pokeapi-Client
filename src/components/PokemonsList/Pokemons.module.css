@@ -29,3 +29,17 @@
     grid-template-columns: 1fr 4fr ;
     margin: 0 15px;
 }
+
+.pageBar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputPage{
+    text-decoration: none;
+    text-align: center;
+}
+
+.textSpan{}

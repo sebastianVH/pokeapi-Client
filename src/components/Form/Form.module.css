@@ -26,7 +26,7 @@ label:first-of-type{
     margin-top: 10px;
 }
 
-span{
+.form > span{
     font-size: 5px;
     margin: 5px;
     padding: 5px;
@@ -57,7 +57,7 @@ button:hover{
     color: rgb(255, 1, 1);
 }
 
-input {
+.formElements > input {
     outline: none;
     border-radius: 10px;
     width: 20vh;
@@ -95,7 +95,7 @@ input {
     font-size: 5vh;
 }
 
-p{
+.span > p{
     color: aliceblue;
     margin-bottom: 0px;
     font-family:'Times New Roman', Times, serif
